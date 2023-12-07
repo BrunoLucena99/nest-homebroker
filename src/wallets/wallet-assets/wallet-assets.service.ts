@@ -23,11 +23,13 @@ export class WalletAssetsService {
   }
 
   create(input: { wallet_id: string; asset_id: string; shares: number }) {
+    //TODO: validar se asset e wallet existe
     return this.prismaService.walletAsset.create({
       data: {
         wallet_id: input.wallet_id,
         asset_id: input.asset_id,
         shares: input.shares,
+        version: 1,
       },
     });
   }
