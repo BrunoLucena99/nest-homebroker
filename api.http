@@ -83,9 +83,9 @@ POST http://localhost:3000/assets
 Content-Type: application/json
 
 {
-  "id": "asset1",
-  "symbol": "A1",
-  "price": 15
+  "id": "asset2",
+  "symbol": "A2",
+  "price": 20
 }
 
 ###
@@ -97,11 +97,11 @@ POST http://localhost:3000/wallets
 Content-Type: application/json
 
 {
-  "id": "wallet1"
+  "id": "wallet3"
 }
 
 ###
-POST http://localhost:3000/wallets/wallet1/assets
+POST http://localhost:3000/wallets/wallet3/assets
 Content-Type: application/json
 
 {
@@ -110,31 +110,31 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3000/wallets/wallet1/assets
+GET http://localhost:3000/wallets/wallet3/assets
 
 ###
-POST http://localhost:3000/wallets/wallet1/orders
+POST http://localhost:3000/wallets/wallet3/orders
 Content-Type: application/json
 
 {
   "asset_id": "asset1",
   "shares": 5,
-  "price": 100,
+  "price": 15,
   "type": "SELL"
 }
 
 ###
-GET http://localhost:3000/wallets/wallet1/orders
+GET http://localhost:3000/wallets/wallet2/orders
 
 ###
-POST http://localhost:3000/wallets/wallet1/orders/execute
+POST http://localhost:3000/wallets/wallet2/orders/execute
 Content-Type: application/json
 
 {
-  "order_id": "6571ff94fa88ac3b68af08f4",
+  "order_id": "657206e22adc60b808550ab6",
   "status": "CLOSED",
   "related_investor_id": "xxxx",
   "broker_transaction_id": "xxxx",
-  "negotiated_shares": 1,
-  "price": 10
+  "negotiated_shares": 7,
+  "price": 15
 }
