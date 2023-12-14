@@ -17,7 +17,8 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "command": "npm run start -- --entryFile commands --"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
@@ -30,6 +31,7 @@
     "@prisma/client": "^4.15.0",
     "kafkajs": "^2.2.4",
     "mongoose": "^8.0.3",
+    "nest-commander": "^3.12.5",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1"
   },

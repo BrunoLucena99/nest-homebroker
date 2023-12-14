@@ -27,6 +27,14 @@ export class AssetsService {
     });
   }
 
+  findOne(id: string) {
+    return this.prismaService.asset.findUnique({
+      where: {
+        id,
+      },
+    });
+  }
+
   all() {
     return this.prismaService.asset.findMany();
   }
